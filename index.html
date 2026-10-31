@@ -1,12 +1,1255 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Мой сайт</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Пошаговое объяснение простым языком: как обычно проходит получение банковского кредита на развитие бизнеса.">
+<title>Как получить финансирование для бизнеса — пошаговый разбор</title>
+<style>
+  :root{
+    --bg:#F4F6F9;
+    --surface:#FFFFFF;
+    --surface-soft:#EEF3F9;
+    --text:#18212F;
+    --muted:#4A5568;
+    --border:#D6DDE7;
+    --border-strong:#9AA8BA;
+    --primary:#1F4E8C;
+    --primary-dark:#163A6A;
+    --primary-soft:#E6EEF8;
+    --accent:#0B7461;
+    --accent-soft:#E5F4EF;
+    --warn:#6E4400;
+    --warn-soft:#FFF4DC;
+    --warn-line:#D99A1E;
+    --focus:#B4530A;
+    --radius:14px;
+    --shadow:0 8px 28px rgba(18,38,66,.08);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{transition:none!important;animation:none!important}
+  }
+  body{
+    margin:0;
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:1.0625rem;line-height:1.6;color:var(--text);background:var(--bg);
+  }
+  img,svg{display:block;max-width:100%}
+  h1,h2,h3,h4{line-height:1.25;margin:0 0 .5em;color:var(--text)}
+  p{margin:0 0 1em}
+  ul,ol{margin:0 0 1em;padding-left:1.25em}
+  li{margin-bottom:.4em}
+  a{color:var(--primary);text-underline-offset:3px}
+  a:hover{color:var(--primary-dark)}
+  [id]{scroll-margin-top:96px}
+  :focus{outline:none}
+  :focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+  .visually-hidden{
+    position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;
+    overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
+  }
+  .container{max-width:1120px;margin:0 auto;padding:0 20px}
+  .skip-link{
+    position:absolute;left:16px;top:-60px;z-index:100;background:var(--primary);color:#fff;
+    padding:.6rem 1rem;border-radius:8px;text-decoration:none;font-weight:600;
+  }
+  .skip-link:focus{top:12px;color:#fff}
+
+  /* ---------- Шапка ---------- */
+  .site-header{
+    position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);
+    border-bottom:1px solid var(--border);
+  }
+  .site-header__inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:64px}
+  .brand{display:flex;align-items:center;gap:.6rem;font-weight:700;color:var(--text);text-decoration:none;font-size:1rem}
+  .brand:hover{color:var(--text)}
+  .brand__mark{width:32px;height:32px;flex:none}
+  .site-nav ul{display:flex;gap:.25rem;list-style:none;margin:0;padding:0}
+  .site-nav li{margin:0}
+  .site-nav a{
+    display:block;padding:.45rem .7rem;border-radius:8px;text-decoration:none;
+    color:var(--muted);font-size:.95rem;font-weight:500;white-space:nowrap;
+  }
+  .site-nav a:hover{background:var(--surface-soft);color:var(--primary-dark)}
+
+  /* ---------- Кнопки ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+    min-height:48px;padding:.7rem 1.35rem;border-radius:10px;border:2px solid transparent;
+    font:inherit;font-weight:600;line-height:1.25;cursor:pointer;text-decoration:none;
+    transition:background-color .15s,border-color .15s,color .15s;
+  }
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn--primary{background:var(--primary);color:#fff}
+  .btn--primary:hover{background:var(--primary-dark);color:#fff}
+  .btn--ghost{background:var(--surface);color:var(--primary);border-color:var(--border-strong)}
+  .btn--ghost:hover{border-color:var(--primary);background:var(--primary-soft);color:var(--primary-dark)}
+  .btn--small{min-height:40px;padding:.45rem .9rem;font-size:.95rem}
+  .btn:disabled{opacity:.45;cursor:not-allowed}
+  .btn:disabled:hover{background:var(--surface);border-color:var(--border-strong);color:var(--primary)}
+
+  /* ---------- Общие секции ---------- */
+  .section{padding:64px 0}
+  .section-head{max-width:760px;margin-bottom:28px}
+  .eyebrow{
+    font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--primary);margin-bottom:.5rem;
+  }
+  .eyebrow--muted{color:var(--muted)}
+  h2{font-size:clamp(1.55rem,3vw,2.1rem)}
+  .section-lead{color:var(--muted);font-size:1.05rem;margin:0}
+  .section--secondary h2{font-size:clamp(1.35rem,2.4vw,1.7rem)}
+  .fine{font-size:.92rem;color:var(--muted);margin:0}
+  .notice{border-radius:12px;padding:16px 20px;margin-bottom:24px}
+  .notice p:last-child{margin-bottom:0}
+  .notice--info{background:var(--primary-soft);border-left:4px solid var(--primary)}
+  .notice--warn{background:var(--warn-soft);border-left:4px solid var(--warn-line)}
+  .notice--warn h3{font-size:1.15rem;color:var(--warn)}
+
+  /* ---------- Первый экран ---------- */
+  .hero{background:linear-gradient(180deg,#E8EFF8 0%,var(--bg) 100%);padding:56px 0 64px}
+  .hero__grid{display:grid;grid-template-columns:1.35fr 1fr;gap:40px;align-items:center}
+  .hero h1{font-size:clamp(2rem,4.6vw,3.05rem);line-height:1.12;margin-bottom:.45em;letter-spacing:-.01em}
+  .hero__lead{font-size:clamp(1.08rem,1.6vw,1.22rem);color:var(--muted);max-width:620px}
+  .scenario{
+    background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--accent);
+    border-radius:12px;padding:14px 18px;margin:0 0 24px;max-width:620px;
+  }
+  .scenario__label{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);margin-bottom:.2rem}
+  .scenario p{margin:0}
+  .hero__actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-bottom:20px}
+  .hero__facts{display:flex;flex-wrap:wrap;gap:6px 18px;list-style:none;padding:0;margin:0;color:var(--muted);font-size:.95rem}
+  .hero__facts li{display:flex;align-items:center;gap:.4rem;margin:0}
+  .hero__facts svg{width:18px;height:18px;color:var(--accent)}
+  .hero__note{font-size:.92rem;color:var(--muted);margin:18px 0 0;max-width:620px}
+  .phase-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px}
+  .phase-card h2{font-size:1.15rem;margin-bottom:1rem}
+  .phase-card ol{list-style:none;padding:0;margin:0;counter-reset:ph}
+  .phase-card li{position:relative;padding:0 0 18px 52px;margin:0;counter-increment:ph}
+  .phase-card li:last-child{padding-bottom:0}
+  .phase-card li::before{
+    content:counter(ph);position:absolute;left:0;top:0;width:36px;height:36px;border-radius:50%;
+    background:var(--primary-soft);color:var(--primary);font-weight:700;display:grid;place-items:center;
+  }
+  .phase-card li:not(:last-child)::after{
+    content:"";position:absolute;left:17px;top:40px;bottom:4px;width:2px;background:var(--border);
+  }
+  .phase-card strong{display:block}
+  .phase-card span{color:var(--muted);font-size:.95rem}
+
+  /* ---------- Маршрут ---------- */
+  .section--route{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+  .tracker{background:var(--surface-soft);border-radius:var(--radius);padding:20px 16px 16px}
+  .phases,.stepper{display:grid;grid-template-columns:repeat(8,minmax(0,1fr))}
+  .phases{margin-bottom:12px;gap:6px}
+  .phase{
+    font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);
+    text-align:center;padding-bottom:6px;border-bottom:3px solid var(--border);
+  }
+  .phase.is-active{color:var(--primary);border-bottom-color:var(--primary)}
+  .phase--1{grid-column:1/4}.phase--2{grid-column:4/6}.phase--3{grid-column:6/9}
+  .stepper{list-style:none;margin:0;padding:0}
+  .stepper__item{position:relative;margin:0}
+  .stepper__item:not(:first-child)::before{
+    content:"";position:absolute;top:25px;left:calc(-50% + 24px);right:calc(50% + 24px);
+    height:2px;background:var(--border-strong);
+  }
+  .stepper__item.is-done::before,.stepper__item.is-current::before{background:var(--accent)}
+  .stepper__btn{
+    position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:.4rem;
+    width:100%;padding:5px 2px;background:none;border:0;border-radius:10px;cursor:pointer;
+    font:inherit;color:var(--muted);
+  }
+  .stepper__btn:hover .stepper__num{border-color:var(--primary)}
+  .stepper__num{
+    width:40px;height:40px;border-radius:50%;border:2px solid var(--border-strong);background:var(--surface);
+    display:grid;place-items:center;font-weight:700;font-size:1rem;color:var(--muted);
+    transition:background-color .2s,border-color .2s,color .2s;
+  }
+  .stepper__label{font-size:.84rem;line-height:1.25;text-align:center}
+  .is-done .stepper__num{background:var(--accent);border-color:var(--accent);color:#fff}
+  .is-current .stepper__num{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 0 0 5px rgba(31,78,140,.18)}
+  .is-current .stepper__label{color:var(--text);font-weight:700}
+  .progress{display:flex;align-items:center;gap:14px;margin-top:16px}
+  .progress__text{margin:0;font-weight:600;font-size:.95rem;white-space:nowrap}
+  .progress__bar{flex:1;height:8px;background:#D9E1EC;border-radius:99px;overflow:hidden}
+  .progress__bar span{display:block;height:100%;width:0;background:var(--primary);border-radius:99px;transition:width .3s ease}
+
+  .step-card{
+    margin-top:24px;background:var(--surface);border:1px solid var(--border);
+    border-radius:var(--radius);box-shadow:var(--shadow);padding:28px 30px;
+  }
+  .step-card__eyebrow{font-size:.85rem;font-weight:700;color:var(--primary);margin-bottom:.35rem;text-transform:uppercase;letter-spacing:.05em}
+  .step-card h3{font-size:clamp(1.4rem,2.6vw,1.8rem);margin-bottom:.6rem}
+  .step-card h3:focus-visible{outline-offset:6px}
+  .step-card__goal{font-size:1.08rem;margin-bottom:22px;max-width:780px}
+  .roles{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+  .role{border:1px solid var(--border);border-radius:12px;padding:18px 20px}
+  .role h4{display:flex;align-items:center;gap:.55rem;font-size:1.02rem;margin-bottom:.75rem}
+  .role__badge{
+    display:inline-grid;place-items:center;min-width:30px;height:30px;padding:0 8px;border-radius:8px;
+    font-size:.8rem;font-weight:700;
+  }
+  .role--client .role__badge{background:var(--primary-soft);color:var(--primary)}
+  .role--bank .role__badge{background:#ECEFF3;color:#3A4657}
+  .role ul{margin:0}
+  .role__note{color:var(--muted);margin:0}
+  .step-note{font-size:.95rem;color:var(--muted);background:var(--surface-soft);border-radius:10px;padding:10px 14px;margin-bottom:20px}
+  .outcome{background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:12px;padding:18px 20px;margin-bottom:20px}
+  .outcome h4{font-size:1.02rem;color:#0A5547;margin-bottom:.4rem}
+  .outcome p{margin:0 0 .5em}
+  .outcome p:last-child{margin:0}
+  .details{border:1px solid var(--border);border-radius:12px;margin-bottom:10px;background:var(--surface)}
+  .details summary{
+    list-style:none;cursor:pointer;padding:14px 48px 14px 18px;font-weight:600;position:relative;border-radius:12px;
+  }
+  .details summary::-webkit-details-marker{display:none}
+  .details summary::after{
+    content:"";position:absolute;right:20px;top:50%;width:10px;height:10px;margin-top:-7px;
+    border-right:2px solid var(--primary);border-bottom:2px solid var(--primary);transform:rotate(45deg);
+    transition:transform .2s;
+  }
+  .details[open] summary::after{transform:rotate(-135deg);margin-top:-2px}
+  .details summary:hover{background:var(--surface-soft)}
+  .details__body{padding:0 18px 16px}
+  .details__body ul{margin-bottom:.6em}
+  .details__body p:last-child,.details__body ul:last-child{margin-bottom:0}
+  .branch-links{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:18px}
+  .branch-links__label{font-weight:600;font-size:.95rem;margin-right:4px}
+  .chip{
+    display:inline-flex;align-items:center;padding:.35rem .8rem;border-radius:99px;font-size:.9rem;
+    background:var(--warn-soft);color:var(--warn);border:1px solid #EDCB85;text-decoration:none;font-weight:500;
+  }
+  .chip:hover{background:#FFEBC0;color:var(--warn)}
+  .step-nav{display:flex;justify-content:space-between;gap:12px;margin-top:20px}
+  .step-nav__btn{flex-direction:column;align-items:flex-start;gap:0;min-width:220px;text-align:left}
+  .step-nav__btn--next{align-items:flex-end;text-align:right}
+  .step-nav__dir{font-size:1rem}
+  .step-nav__target{font-size:.85rem;font-weight:500;opacity:.9}
+
+  /* ---------- Ветвления ---------- */
+  .branches{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .branch{
+    background:var(--surface);border:1px solid var(--border);border-top:4px solid var(--warn-line);
+    border-radius:12px;padding:20px 22px;display:flex;flex-direction:column;
+  }
+  .branch__when{font-size:.85rem;font-weight:600;color:var(--warn);margin-bottom:.4rem}
+  .branch h3{font-size:1.15rem}
+  .branch h4{font-size:.98rem;margin:.2em 0 .4em}
+  .branch__route{background:var(--surface-soft);border-radius:10px;padding:10px 14px;margin:auto 0 14px;font-size:.97rem}
+  .branch__example{font-size:.95rem;color:var(--muted);border-left:3px solid var(--border-strong);padding-left:12px}
+  .branch__actions{display:flex;flex-wrap:wrap;gap:8px}
+
+  /* ---------- Документы ---------- */
+  .checklist-bar{
+    display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;background:var(--surface);
+    border:1px solid var(--border);border-radius:12px;padding:14px 18px;margin-bottom:18px;
+  }
+  .checklist-bar p{margin:0;font-weight:600;min-width:170px}
+  .checklist-bar .progress__bar{min-width:140px}
+  .checklist-bar .progress__bar span{background:var(--accent)}
+  .doc-groups{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:16px}
+  .doc-group{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px 10px;margin:0;min-width:0}
+  .doc-group legend{font-weight:700;font-size:1.02rem;padding:0 6px;margin-left:-6px}
+  .doc-group ul{list-style:none;padding:0;margin:6px 0 0}
+  .doc-group li{margin:0 0 4px}
+  .doc-item{display:flex;gap:12px;align-items:flex-start;padding:8px 10px;border-radius:8px;cursor:pointer;transition:background-color .15s}
+  .doc-item:hover{background:var(--surface-soft)}
+  .doc-item.is-checked{background:var(--accent-soft)}
+  .doc-item input{width:20px;height:20px;margin:3px 0 0;flex:none;accent-color:var(--accent);cursor:pointer}
+  .doc-item__hint{display:block;font-size:.88rem;color:var(--muted)}
+
+  /* ---------- Сроки ---------- */
+  .timing{display:grid;grid-template-columns:1.1fr 1fr;gap:18px}
+  .panel{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 22px}
+  .panel h3{font-size:1.12rem;margin-bottom:.8rem}
+  .factor-list{list-style:none;padding:0;margin:0}
+  .factor-list li{padding:10px 0;border-top:1px solid var(--border);margin:0}
+  .factor-list li:first-child{border-top:0;padding-top:0}
+  .ranges{margin:0 0 14px}
+  .ranges div{padding:10px 0;border-top:1px solid var(--border)}
+  .ranges div:first-child{border-top:0;padding-top:0}
+  .ranges dt{font-weight:600}
+  .ranges dd{margin:0;color:var(--muted)}
+
+  /* ---------- Вопросы ---------- */
+  .faq{max-width:860px}
+  .faq .details summary{font-size:1.02rem}
+
+  /* ---------- Итоги ---------- */
+  .section--summary{background:var(--surface);border-top:1px solid var(--border)}
+  .summary-list{list-style:none;padding:0;margin:0 0 28px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+  .summary-list li{display:flex;gap:12px;align-items:flex-start;background:var(--surface-soft);border-radius:12px;padding:14px;margin:0;font-size:.97rem}
+  .summary-list__num{
+    flex:none;width:30px;height:30px;border-radius:50%;background:var(--primary);color:#fff;
+    font-weight:700;font-size:.9rem;display:grid;place-items:center;
+  }
+  .contact__toggle svg{transition:transform .2s}
+  .contact__toggle[aria-expanded="true"] svg{transform:rotate(180deg)}
+  .contact__panel{margin-top:16px;border:1px solid var(--border);border-radius:12px;padding:20px 24px;background:var(--surface)}
+  .contact__panel h3{font-size:1.15rem}
+  .contact__panel > ol > li{margin-bottom:.7em}
+  .contact__panel ul{margin-top:.4em}
+
+  /* ---------- Подвал ---------- */
+  .site-footer{background:#14243B;color:#D7DEE8;padding:32px 0;font-size:.93rem}
+  .site-footer p{margin:0 0 .6em;max-width:860px}
+  .site-footer p:last-child{margin:0}
+  .site-footer strong{color:#fff}
+
+  /* ---------- Адаптивность ---------- */
+  @media (max-width:960px){
+    .summary-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+  }
+  @media (max-width:860px){
+    .hero__grid,.roles,.branches,.doc-groups,.timing{grid-template-columns:1fr}
+    .hero{padding:40px 0 48px}
+    .site-header__inner{flex-direction:column;align-items:stretch;gap:0;padding-top:8px}
+    .site-nav{overflow-x:auto;margin:0 -20px;padding:4px 14px 8px;-webkit-overflow-scrolling:touch}
+    [id]{scroll-margin-top:120px}
+  }
+  @media (max-width:640px){
+    body{font-size:1rem}
+    .section{padding:44px 0}
+    .container{padding:0 16px}
+    .site-nav{margin:0 -16px;padding:4px 10px 8px}
+    .tracker{padding:16px 8px 14px}
+    .phase{font-size:.66rem;letter-spacing:.02em}
+    .stepper__label{
+      position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+      clip:rect(0,0,0,0);white-space:nowrap;border:0;
+    }
+    .stepper__num{width:32px;height:32px;font-size:.9rem}
+    .stepper__item:not(:first-child)::before{top:21px;left:calc(-50% + 18px);right:calc(50% + 18px)}
+    .progress{flex-direction:column;align-items:stretch;gap:8px}
+    .step-card{padding:20px 18px}
+    .role{padding:16px}
+    .step-nav__btn{min-width:0;flex:1;padding:.6rem .9rem}
+    .summary-list{grid-template-columns:1fr}
+    .contact__panel{padding:18px}
+    .hero__actions .btn{width:100%}
+  }
+  @media print{
+    .site-header,.step-nav,.hero__actions,.contact__toggle,.checklist-bar .btn{display:none!important}
+    .contact__panel[hidden]{display:block!important}
+    body{background:#fff}
+    .step-card,.panel,.branch,.doc-group{box-shadow:none}
+  }
+</style>
 </head>
 <body>
-  <h1>Привет! Это мой сайт</h1>
-  <p>Страница опубликована на GitHub Pages2.</p>
+<a class="skip-link" href="#main">Перейти к содержанию</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="#top" aria-label="Путеводитель по финансированию бизнеса — в начало страницы">
+      <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="8" fill="#1F4E8C"/>
+        <circle cx="9" cy="22" r="3" fill="#fff"/>
+        <circle cx="23" cy="10" r="3" fill="#fff"/>
+        <path d="M9 22c0-6 14-6 14-12" stroke="#7FD1BE" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span>Путеводитель по финансированию</span>
+    </a>
+    <nav class="site-nav" aria-label="Разделы страницы">
+      <ul>
+        <li><a href="#route">Маршрут</a></li>
+        <li><a href="#branches">Если маршрут меняется</a></li>
+        <li><a href="#documents">Документы</a></li>
+        <li><a href="#timing">Сроки</a></li>
+        <li><a href="#faq">Вопросы</a></li>
+        <li><a href="#summary">Итоги</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <!-- 1. Первый экран -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="container hero__grid">
+      <div>
+        <p class="eyebrow">Пошаговый путеводитель для предпринимателей</p>
+        <h1 id="hero-title">Как получить финансирование для бизнеса</h1>
+        <p class="hero__lead">Объясняем простым языком, как обычно проходит получение кредита в банке: с чего начать, как банк рассматривает заявку и что происходит после выдачи денег.</p>
+        <div class="scenario">
+          <p class="scenario__label">Разбираемый сценарий</p>
+          <p><strong>Кредит на развитие бизнеса</strong> для ИП и компаний малого и среднего бизнеса. Это деньги, которые банк выдаёт на конкретную цель (например, на покупку оборудования) на определённый срок, а бизнес возвращает их по графику вместе с процентами.</p>
+        </div>
+        <div class="hero__actions">
+          <button type="button" class="btn btn--primary" id="start-btn">
+            Начать разбор
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </button>
+        </div>
+        <ul class="hero__facts">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>8 типовых этапов</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Без регистрации и ввода данных</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Сайт не принимает заявки</li>
+        </ul>
+        <p class="hero__note">Это типовой маршрут, а не условия конкретного банка. Требования, сроки, стоимость и решение зависят от банка, продукта и обстоятельств вашего бизнеса.</p>
+      </div>
+      <aside class="phase-card" aria-labelledby="phases-title">
+        <h2 id="phases-title">Маршрут из трёх частей</h2>
+        <ol>
+          <li><strong>Подготовка</strong><span>Этапы 1–3: цель и сумма, выбор условий, заявка</span></li>
+          <li><strong>Решение банка</strong><span>Этапы 4–5: рассмотрение и согласование условий</span></li>
+          <li><strong>Оформление и возврат</strong><span>Этапы 6–8: договор, получение средств, погашение</span></li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 2–3. Обзор маршрута и пошаговый разбор -->
+  <section class="section section--route" id="route" aria-labelledby="route-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Основной маршрут</p>
+        <h2 id="route-title">Маршрут получения кредита: 8 типовых этапов</h2>
+        <p class="section-lead">Выберите этап на схеме или переходите по порядку кнопками «Назад» и «Далее». Порядок и содержание этапов зависят от банка и продукта: в упрощённых продуктах этапы могут объединяться, в крупных сделках — дополняться.</p>
+      </div>
+
+      <div class="tracker" id="tracker">
+        <div class="phases" aria-hidden="true">
+          <span class="phase phase--1" data-phase="0">Подготовка</span>
+          <span class="phase phase--2" data-phase="1">Решение банка</span>
+          <span class="phase phase--3" data-phase="2">Оформление и возврат</span>
+        </div>
+        <nav aria-label="Этапы маршрута">
+          <ol class="stepper" id="stepper"></ol>
+        </nav>
+        <div class="progress">
+          <p class="progress__text" id="progress-text">Этап 1 из 8</p>
+          <div class="progress__bar" aria-hidden="true"><span id="progress-fill"></span></div>
+        </div>
+      </div>
+
+      <article class="step-card" id="step-card" aria-labelledby="step-title">
+        <noscript><p>Для пошагового разбора включите JavaScript в браузере.</p></noscript>
+      </article>
+
+      <div class="step-nav">
+        <button type="button" class="btn btn--ghost step-nav__btn" id="prev-btn">
+          <span class="step-nav__dir">← Назад</span>
+          <span class="step-nav__target" id="prev-target"></span>
+        </button>
+        <button type="button" class="btn btn--primary step-nav__btn step-nav__btn--next" id="next-btn">
+          <span class="step-nav__dir">Далее →</span>
+          <span class="step-nav__target" id="next-target"></span>
+        </button>
+      </div>
+      <p class="visually-hidden" aria-live="polite" id="step-live"></p>
+    </div>
+  </section>
+
+  <!-- Альтернативные сценарии -->
+  <section class="section section--secondary" id="branches" aria-labelledby="branches-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow eyebrow--muted">Возможные варианты</p>
+        <h2 id="branches-title">Если маршрут меняется</h2>
+        <p class="section-lead">Это не обязательные этапы, а ситуации, которые случаются в некоторых заявках. В каждой карточке написано, на каком этапе такое бывает и куда вести маршрут дальше.</p>
+      </div>
+      <div class="branches">
+        <article class="branch" id="branch-more-info" aria-labelledby="bt-1">
+          <p class="branch__when">Может возникнуть на этапах 3–4</p>
+          <h3 id="bt-1">Банк запросил дополнительные сведения</h3>
+          <p>Банку не хватает данных для решения: например, нужны пояснения к отчётности, договоры с покупателями или документы по залогу.</p>
+          <h4>Что делать</h4>
+          <ul>
+            <li>Уточните, что именно нужно и к какому сроку.</li>
+            <li>По возможности передайте все документы одним комплектом.</li>
+            <li>Если документа нет, объясните причину и спросите, чем его можно заменить.</li>
+          </ul>
+          <p class="branch__route"><strong>Как меняется маршрут:</strong> рассмотрение продолжится, когда банк получит сведения. Общий срок может увеличиться.</p>
+          <div class="branch__actions">
+            <button type="button" class="btn btn--ghost btn--small" data-goto="4">Открыть этап 4. Рассмотрение</button>
+          </div>
+        </article>
+
+        <article class="branch" id="branch-rework" aria-labelledby="bt-2">
+          <p class="branch__when">Может возникнуть на этапах 2–4</p>
+          <h3 id="bt-2">Нужно вернуться к подготовке заявки</h3>
+          <p>Выяснилось, что сумма или срок не соответствуют возможностям бизнеса, нет подходящего обеспечения или документы требуют серьёзной доработки.</p>
+          <h4>Что делать</h4>
+          <ul>
+            <li>Пересчитайте потребность и посильный ежемесячный платёж.</li>
+            <li>Доработайте документы или подберите другое обеспечение.</li>
+            <li>Уточните в банке, можно ли изменить текущую заявку или нужно подать новую.</li>
+          </ul>
+          <p class="branch__route"><strong>Как меняется маршрут:</strong> если меняются цель или сумма, вернитесь к этапу 1. Если не хватает только документов, вернитесь к этапу 3.</p>
+          <div class="branch__actions">
+            <button type="button" class="btn btn--ghost btn--small" data-goto="1">Открыть этап 1. Цель и сумма</button>
+            <button type="button" class="btn btn--ghost btn--small" data-goto="3">Открыть этап 3. Заявка</button>
+          </div>
+        </article>
+
+        <article class="branch" id="branch-other-terms" aria-labelledby="bt-3">
+          <p class="branch__when">Может возникнуть после этапа 4</p>
+          <h3 id="bt-3">Банк предложил иные условия</h3>
+          <p>Банк готов выдать кредит, но не на тех условиях, которые вы просили. Например, на меньшую сумму, на другой срок, по другой ставке или с дополнительным обеспечением.</p>
+          <h4>Что делать</h4>
+          <ul>
+            <li>Оцените, решает ли предложение вашу задачу.</li>
+            <li>Пересчитайте платёж и общую стоимость кредита.</li>
+            <li>Вы можете принять условия, обсудить их с банком или отказаться.</li>
+          </ul>
+          <p class="branch__example"><strong>Условный пример:</strong> компания просила 3&nbsp;млн&nbsp;₽ на 3&nbsp;года, а банк одобрил 2,5&nbsp;млн&nbsp;₽ при условии поручительства владельца. Компании нужно решить, покроет ли она разницу собственными средствами.</p>
+          <p class="branch__route"><strong>Как меняется маршрут:</strong> если условия подходят, переходите к этапу 5. Если нет — вернитесь к этапу 2 и сравните другие предложения.</p>
+          <div class="branch__actions">
+            <button type="button" class="btn btn--ghost btn--small" data-goto="5">Открыть этап 5. Согласование</button>
+            <button type="button" class="btn btn--ghost btn--small" data-goto="2">Открыть этап 2. Условия</button>
+          </div>
+        </article>
+
+        <article class="branch" id="branch-decline" aria-labelledby="bt-4">
+          <p class="branch__when">Может возникнуть после этапа 4</p>
+          <h3 id="bt-4">Банк принял отрицательное решение</h3>
+          <p>Банк вправе отказать в кредите и не всегда объясняет причины. Отказ одного банка не означает, что так же решат все остальные.</p>
+          <h4>Что делать</h4>
+          <ul>
+            <li>Спросите, можно ли узнать, какие факторы повлияли на решение.</li>
+            <li>Проверьте кредитную историю компании и владельцев: её можно запросить в бюро кредитных историй.</li>
+            <li>Устраните то, что можно исправить: налоговую задолженность, ошибки в отчётности, высокую долговую нагрузку.</li>
+            <li>Рассмотрите другую сумму, другой продукт или другой банк.</li>
+          </ul>
+          <p class="branch__route"><strong>Как меняется маршрут:</strong> по этой заявке маршрут завершён. Новая попытка начинается с этапа 1 или 2.</p>
+          <div class="branch__actions">
+            <button type="button" class="btn btn--ghost btn--small" data-goto="1">Открыть этап 1. Цель и сумма</button>
+            <button type="button" class="btn btn--ghost btn--small" data-goto="2">Открыть этап 2. Условия</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Документы -->
+  <section class="section section--secondary" id="documents" aria-labelledby="docs-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow eyebrow--muted">Дополнительно</p>
+        <h2 id="docs-title">Типовой список документов</h2>
+        <p class="section-lead">Отмечайте подготовленные пункты, чтобы видеть, что ещё осталось собрать.</p>
+      </div>
+      <div class="notice notice--info">
+        <p><strong>Точный перечень определяет банк.</strong> Он зависит от продукта, суммы, формы бизнеса (ИП или юридическое лицо), системы налогообложения и обеспечения. Некоторые сведения, например выписку из ЕГРЮЛ или ЕГРИП (государственного реестра компаний и ИП), банк обычно получает сам.</p>
+      </div>
+      <div class="checklist-bar">
+        <p id="doc-count" aria-live="polite">Отмечено 0 из 0</p>
+        <div class="progress__bar" aria-hidden="true"><span id="doc-fill"></span></div>
+        <button type="button" class="btn btn--ghost btn--small" id="doc-reset">Снять все отметки</button>
+      </div>
+      <div class="doc-groups" id="doc-groups"></div>
+      <p class="fine">Отметки хранятся только в вашем браузере и никуда не передаются. Сайт не запрашивает персональные данные.</p>
+    </div>
+  </section>
+
+  <!-- 5. Сроки -->
+  <section class="section section--secondary" id="timing" aria-labelledby="timing-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow eyebrow--muted">Дополнительно</p>
+        <h2 id="timing-title">Сколько времени это занимает</h2>
+        <p class="section-lead">Единого срока нет. Длительность зависит от суммы, банка, продукта и того, насколько готов к проверке сам бизнес.</p>
+      </div>
+      <div class="timing">
+        <div class="panel">
+          <h3>Что влияет на сроки</h3>
+          <ul class="factor-list">
+            <li><strong>Полнота документов.</strong> Чаще всего банк запрашивает дополнительные сведения из-за неполного пакета или расхождений в данных.</li>
+            <li><strong>Сумма и сложность сделки.</strong> Чем крупнее кредит, тем подробнее анализ и тем больше уровней согласования.</li>
+            <li><strong>Залог.</strong> На оценку, страхование и регистрацию залога нужно отдельное время.</li>
+            <li><strong>Прозрачность бизнеса.</strong> Понятная отчётность и простая структура владения ускоряют проверку.</li>
+            <li><strong>Программы поддержки.</strong> Если кредит выдаётся по государственной программе, может понадобиться согласование с её оператором.</li>
+            <li><strong>Скорость ваших ответов.</strong> Пока банк ждёт документы или пояснения, рассмотрение фактически стоит на месте.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Ориентиры, а не гарантии</h3>
+          <dl class="ranges">
+            <div><dt>Подготовка (этапы 1–3)</dt><dd>Зависит от вас. Если отчётность уже готова — от нескольких дней.</dd></div>
+            <div><dt>Рассмотрение по упрощённой процедуре</dt><dd>Для небольших сумм без залога банки нередко указывают срок от одного до нескольких рабочих дней.</dd></div>
+            <div><dt>Рассмотрение с залогом и подробным анализом</dt><dd>Может занять несколько недель.</dd></div>
+            <div><dt>Оформление и регистрация залога</dt><dd>Может добавить от нескольких дней до нескольких недель.</dd></div>
+            <div><dt>Возврат кредита</dt><dd>Срок определяет договор: от нескольких месяцев до нескольких лет.</dd></div>
+          </dl>
+          <p class="fine">Ориентиры обобщают распространённую практику и не являются обещанием какого-либо банка. Точные сроки уточняйте в выбранном банке.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Частые вопросы -->
+  <section class="section section--secondary" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow eyebrow--muted">Дополнительно</p>
+        <h2 id="faq-title">Частые вопросы</h2>
+      </div>
+      <div class="faq">
+        <details class="details">
+          <summary>Можно ли подать заявки в несколько банков одновременно?</summary>
+          <div class="details__body"><p>Да, так можно сравнить решения. Но каждый запрос банка фиксируется в кредитной истории, а много заявок за короткий срок может насторожить кредиторов. Обычно разумнее выбрать несколько банков, условия которых вам действительно подходят.</p></div>
+        </details>
+        <details class="details">
+          <summary>Влияет ли на решение личная кредитная история владельца?</summary>
+          <div class="details__body"><p>Часто влияет, особенно в малом бизнесе. Банк может изучать кредитную историю основных владельцев и руководителя — в первую очередь если они выступают поручителями.</p></div>
+        </details>
+        <details class="details">
+          <summary>Можно ли получить кредит, если бизнес работает недавно?</summary>
+          <div class="details__body"><p>Многие продукты требуют определённого срока работы бизнеса, но требования у банков разные. Для молодых компаний иногда есть отдельные продукты или программы поддержки. Залог или поручительство при этом нужны чаще.</p></div>
+        </details>
+        <details class="details">
+          <summary>Можно ли погасить кредит досрочно?</summary>
+          <div class="details__body"><p>Обычно да, но условия различаются. Может понадобиться заранее предупредить банк, возможны ограничения по срокам или комиссия. Выясните это до подписания договора.</p></div>
+        </details>
+        <details class="details">
+          <summary>Что делать, если платить становится трудно?</summary>
+          <div class="details__body"><p>Обратитесь в банк как можно раньше, до первой просрочки. Банк может рассмотреть реструктуризацию — изменение условий долга, например увеличение срока или отсрочку платежей. Каждое обращение рассматривается отдельно, и банк не обязан соглашаться.</p></div>
+        </details>
+        <details class="details">
+          <summary>Нужен ли кредитный брокер или другой посредник?</summary>
+          <div class="details__body"><p>Нет, обратиться в банк можно напрямую. Осторожно относитесь к посредникам, которые требуют предоплату и обещают гарантированное одобрение: решение по кредиту принимает только банк.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Завершение -->
+  <section class="section section--summary" id="summary" aria-labelledby="summary-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Итоги</p>
+        <h2 id="summary-title" tabindex="-1">Коротко о маршруте</h2>
+      </div>
+      <ol class="summary-list">
+        <li><span class="summary-list__num" aria-hidden="true">1</span><div><strong>Цель и сумма.</strong> Рассчитайте, сколько нужно и какой платёж посилен бизнесу.</div></li>
+        <li><span class="summary-list__num" aria-hidden="true">2</span><div><strong>Условия.</strong> Сравните предложения по полной стоимости и требованиям.</div></li>
+        <li><span class="summary-list__num" aria-hidden="true">3</span><div><strong>Заявка.</strong> Подайте полный и достоверный пакет документов.</div></li>
+        <li><span class="summary-list__num" aria-hidden="true">4</span><div><strong>Рассмотрение.</strong> Банк анализирует бизнес и принимает решение.</div></li>
+        <li><span class="summary-list__num" aria-hidden="true">5</span><div><strong>Согласование.</strong> Убедитесь, что одобренные условия понятны и посильны.</div></li>
+        <li><span class="summary-list__num" aria-hidden="true">6</span><div><strong>Подписание.</strong> Подпишите договоры и выполните условия выдачи.</div></li>
+        <li><span class="summary-list__num" aria-hidden="true">7</span><div><strong>Получение средств.</strong> Тратьте деньги на цель, указанную в договоре.</div></li>
+        <li><span class="summary-list__num" aria-hidden="true">8</span><div><strong>Возврат.</strong> Платите по графику и выполняйте условия договора.</div></li>
+      </ol>
+
+      <div class="notice notice--warn">
+        <h3>Перед подписанием изучите договор</h3>
+        <p>Решение банка и устные договорённости не заменяют договор. Проверьте полную стоимость кредита, график платежей, комиссии, требования к обеспечению и страхованию, ковенанты, неустойки и порядок досрочного погашения. Если что-то непонятно, задайте вопрос банку до подписания.</p>
+      </div>
+
+      <div class="contact">
+        <button type="button" class="btn btn--primary contact__toggle" id="contact-toggle" aria-expanded="false" aria-controls="contact-panel">
+          Как обратиться в банк
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="contact__panel" id="contact-panel" hidden>
+          <h3>Общие рекомендации по следующему шагу</h3>
+          <ol>
+            <li><strong>Пользуйтесь официальными каналами:</strong> сайт банка, интернет-банк или приложение для бизнеса, отделение, телефон с официального сайта.</li>
+            <li><strong>Проверьте, что перед вами банк с действующей лицензией.</strong> Это можно сделать в справочнике кредитных организаций на официальном сайте Банка России.</li>
+            <li><strong>Подготовьте краткое описание:</strong> цель кредита, сумма, срок, основные сведения о бизнесе и возможном обеспечении.</li>
+            <li><strong>Задайте вопросы до подачи заявки:</strong>
+              <ul>
+                <li>Какие документы нужны именно в вашем случае?</li>
+                <li>Какова полная стоимость кредита и какие комиссии предусмотрены?</li>
+                <li>Нужны ли залог, поручительство, страхование?</li>
+                <li>Сколько обычно длится рассмотрение по этому продукту?</li>
+                <li>Какие ковенанты предусмотрены и что будет, если их нарушить?</li>
+                <li>Можно ли погасить кредит досрочно и на каких условиях?</li>
+              </ul>
+            </li>
+            <li><strong>Берегите конфиденциальные данные:</strong> никому не сообщайте пароли, коды из SMS и данные карт, в том числе людям, которые представляются сотрудниками банка.</li>
+          </ol>
+          <p class="fine">Этот сайт не принимает и не передаёт заявки. Чтобы подать заявку, обратитесь в выбранный банк напрямую.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p><strong>Информационный материал.</strong> Здесь описан типовой процесс. Это не предложение, не оферта и не консультация какого-либо банка, и одобрение или получение средств не гарантируется.</p>
+    <p>Требования, сроки, стоимость и решения зависят от банка, продукта и обстоятельств клиента. Сайт не собирает персональные данные и не принимает заявки.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  var PHASES = ['Подготовка', 'Решение банка', 'Оформление и возврат'];
+
+  var BRANCH_TITLES = {
+    'more-info': 'Банк запросил дополнительные сведения',
+    'rework': 'Нужно вернуться к подготовке',
+    'other-terms': 'Банк предложил иные условия',
+    'decline': 'Отрицательное решение'
+  };
+
+  var STAGES = [
+    {
+      short: 'Цель и сумма',
+      title: 'Определите цель и сумму финансирования',
+      phase: 0,
+      goal: 'Понять, на что нужны деньги, сколько и на какой срок, и сможет ли бизнес регулярно вносить платежи.',
+      client: [
+        'Сформулируйте цель: покупка оборудования, ремонт помещения, открытие новой точки или пополнение оборотных средств — денег на текущие расходы вроде закупки товара и сырья.',
+        'Рассчитайте сумму по сметам и коммерческим предложениям, а не «с запасом на всякий случай».',
+        'Оцените денежный поток — сколько денег остаётся у бизнеса после всех обязательных расходов — и определите посильный ежемесячный платёж.',
+        'Решите, на какой срок нужен кредит и сколько собственных средств вы готовы вложить.',
+        'Подумайте, что можно предложить в качестве <strong>обеспечения</strong> — залога имущества или поручительства. Обеспечение снижает риск банка.'
+      ],
+      bank: [],
+      bankNote: 'Обычно банк на этом этапе не участвует. Работа идёт внутри компании, при необходимости — вместе с бухгалтером или финансовым консультантом.',
+      docs: [
+        'Сметы, счета или коммерческие предложения поставщиков.',
+        'Данные о выручке и расходах за последние 6–12 месяцев.',
+        'Сведения о действующих кредитах, займах, лизинге и других обязательствах.',
+        'Перечень имущества, которое можно предложить в залог.'
+      ],
+      result: 'Вы знаете цель, сумму, желаемый срок и максимальный платёж, который бизнес может вносить без ущерба для работы.',
+      next: 'когда вы можете коротко объяснить, на что нужен кредит и из каких доходов вы будете его возвращать.',
+      delays: [
+        'Сумма не подтверждена расчётами — банк, скорее всего, задаст вопросы.',
+        'Платёж забирает почти весь свободный денежный поток. Это риск для бизнеса и частый повод для отказа.',
+        'Не учтена сезонность: в отдельные месяцы выручка может заметно снижаться.'
+      ],
+      example: '<p><strong>Условный пример.</strong> Цифры приведены только для иллюстрации и не отражают условия какого-либо банка.</p><p>Небольшая производственная компания хочет купить станок за 3&nbsp;млн&nbsp;₽, чтобы выпускать больше продукции. После всех обязательных расходов у неё в среднем остаётся около 250&nbsp;тыс.&nbsp;₽ в месяц. Если по предварительному расчёту платёж составит около 110&nbsp;тыс.&nbsp;₽ в месяц на 3&nbsp;года, у компании останется запас на случай сезонного спада. Если бы платёж составлял 230&nbsp;тыс.&nbsp;₽, запаса почти не было бы, и стоило бы пересмотреть сумму или срок либо вложить больше собственных средств.</p>',
+      branches: []
+    },
+    {
+      short: 'Условия',
+      title: 'Изучите условия и сравните предложения',
+      phase: 0,
+      goal: 'Найти продукт, который подходит под вашу цель, и заранее понять основные требования банков.',
+      client: [
+        'Изучите на официальных сайтах банков условия кредитов для бизнеса: сумму, срок, ставку, комиссии, требования к обеспечению.',
+        'Сравнивайте не только процентную ставку, но и <strong>полную стоимость кредита</strong> — все расходы по кредиту, включая комиссии, страхование и оценку залога.',
+        'Проверьте базовые требования к <strong>заёмщику</strong> (тому, кто получает кредит): срок работы бизнеса, форму регистрации, отрасль, регион.',
+        'Узнайте, есть ли кредиты по программам государственной поддержки малого и среднего бизнеса и подходите ли вы под их условия.',
+        'Запишите вопросы и обсудите их с менеджером банка.'
+      ],
+      bank: [
+        'Рассказывает о продуктах и требованиях.',
+        'Может провести предварительную оценку по основным данным компании и рассчитать примерный график платежей.'
+      ],
+      docs: [
+        'ИНН и основные сведения о компании или ИП.',
+        'Примерные показатели выручки.',
+        'Желаемые сумма, срок и цель кредита.'
+      ],
+      note: 'Предварительная оценка и примерный расчёт — это ещё не решение банка и не гарантия одобрения.',
+      result: 'Выбран банк (или несколько банков) и продукт. Понятны основные требования и примерная стоимость кредита.',
+      next: 'когда условия продукта в целом вам подходят, а бизнес соответствует базовым требованиям банка.',
+      delays: [
+        'Бизнес не соответствует базовым требованиям, например по сроку работы.',
+        'Для выбранного продукта нет подходящего обеспечения.',
+        'Предварительный расчёт показывает платёж выше посильного. Стоит вернуться к этапу 1 и пересмотреть сумму или срок.'
+      ],
+      branches: ['rework']
+    },
+    {
+      short: 'Заявка',
+      title: 'Подготовьте и подайте заявку',
+      phase: 0,
+      goal: 'Передать банку полную и достоверную информацию для рассмотрения.',
+      client: [
+        'Заполните анкету-заявку через канал, который предлагает банк: интернет-банк, отделение или персональный менеджер.',
+        'Соберите документы по перечню банка. Типовой список есть в разделе «Документы».',
+        'Дайте согласие на запрос <strong>кредитной истории</strong> — сведений о том, как компания и её владельцы выполняли прежние обязательства по кредитам.',
+        'Проверьте, что данные в анкете совпадают с отчётностью и документами.',
+        'Сохраните копию поданных документов и контакты сотрудника, который ведёт заявку.'
+      ],
+      bank: [
+        'Регистрирует заявку.',
+        'Проверяет, все ли документы на месте, и может сразу запросить недостающие.'
+      ],
+      docs: [
+        'Анкета-заявка.',
+        'Учредительные документы и документы о полномочиях руководителя.',
+        'Финансовая и налоговая отчётность.',
+        'Выписки по счетам в других банках.',
+        'Документы о цели кредита и об обеспечении.',
+        'Согласия на обработку персональных данных и запрос кредитной истории.'
+      ],
+      result: 'Банк принял заявку в работу.',
+      next: 'когда банк подтвердил, что принял документы к рассмотрению.',
+      delays: [
+        'Не хватает документов.',
+        'Данные в анкете, отчётности и выписках не совпадают.',
+        'У документов истёк срок действия или нет нужных подписей.'
+      ],
+      branches: ['more-info', 'rework']
+    },
+    {
+      short: 'Рассмотрение',
+      title: 'Банк рассматривает заявку',
+      phase: 1,
+      goal: 'Банк оценивает, сможет ли бизнес вернуть кредит, и определяет, на каких условиях готов его выдать.',
+      client: [
+        'Оставайтесь на связи и быстро отвечайте на вопросы банка.',
+        'Давайте пояснения и дополнительные документы, если банк их запросит.',
+        'Если банк хочет посетить место ведения бизнеса, договоритесь о времени и обеспечьте доступ.'
+      ],
+      bank: [
+        'Проверяет компанию, её владельцев и руководителей, в том числе по открытым реестрам и кредитной истории.',
+        'Анализирует финансовое положение: выручку, прибыль, долговую нагрузку, денежный поток и их динамику.',
+        'Оценивает обеспечение: сколько стоит залог, насколько легко его продать, насколько надёжны поручители.',
+        'Может запросить дополнительные сведения или посетить место ведения бизнеса.',
+        'Принимает решение. Его принимает уполномоченный сотрудник или <strong>кредитный комитет</strong> — коллегиальный орган банка, который утверждает кредиты.'
+      ],
+      docs: [
+        'Пояснения к отчётности, например к резким изменениям выручки.',
+        'Расшифровки дебиторской и кредиторской задолженности — кто и сколько должен вам и кому должны вы.',
+        'Договоры с ключевыми покупателями и поставщиками.',
+        'Отчёт об оценке залога, если его требует банк.'
+      ],
+      result: 'Банк принимает одно из решений: одобрить кредит на запрошенных условиях, одобрить на иных условиях или отказать.',
+      next: 'при положительном решении. Другие варианты описаны в блоке «Если маршрут меняется».',
+      delays: [
+        'Банк запрашивает дополнительные документы.',
+        'Нужно время на оценку и проверку залога.',
+        'У бизнеса сложная структура владения или он входит в группу компаний.',
+        'Есть негативная кредитная история или налоговая задолженность.'
+      ],
+      branches: ['more-info', 'rework', 'other-terms', 'decline']
+    },
+    {
+      short: 'Согласование',
+      title: 'Согласуйте условия кредита',
+      phase: 1,
+      goal: 'До подписания договора убедиться, что одобренные условия понятны и посильны.',
+      client: [
+        'Внимательно изучите решение банка: сумму, срок, ставку, график платежей, комиссии, обеспечение.',
+        'Уточните <strong>ковенанты</strong> — дополнительные обязательства заёмщика по договору. Например, поддерживать определённый оборот по счёту или регулярно сдавать отчётность.',
+        'Проверьте, будет ли платёж посилен с учётом сезонности и возможного снижения выручки.',
+        'Спросите о досрочном погашении, штрафах и порядке изменения условий.',
+        'Если нужно, предложите скорректировать условия. Банк вправе не согласиться.'
+      ],
+      bank: [
+        'Сообщает решение и условия.',
+        'Отвечает на вопросы и, если может, рассматривает предложения клиента.',
+        'Готовит проекты договоров.'
+      ],
+      docs: [
+        'Решение банка или перечень одобренных условий.',
+        'Проекты кредитного договора и договоров обеспечения.',
+        'Предварительный график платежей.'
+      ],
+      note: 'Положительное решение обычно действует ограниченное время. Уточните, до какой даты нужно подписать договор.',
+      result: 'Вы с банком договорились об условиях, и вам понятны все свои обязательства.',
+      next: 'только когда условия вас устраивают и вы понимаете, что будет, если их нарушить.',
+      delays: [
+        'Обсуждение изменений в условиях.',
+        'Для обеспечения нужны дополнительные действия: оценка, страхование, получение согласий.'
+      ],
+      branches: ['other-terms']
+    },
+    {
+      short: 'Подписание',
+      title: 'Подпишите договор и оформите обеспечение',
+      phase: 2,
+      goal: 'Юридически оформить кредит и выполнить условия, без которых банк не выдаст деньги.',
+      client: [
+        'Прочитайте договор целиком, включая приложения. Если нужно, привлеките юриста.',
+        'Получите корпоративные одобрения, если они нужны. Например, решение участников об одобрении крупной сделки — сделки, которая по закону требует согласия собственников компании.',
+        'Подпишите кредитный договор, а также договоры залога и поручительства.',
+        'Оформите страхование залога, если оно предусмотрено условиями.',
+        'Выполните <strong>условия выдачи</strong> — действия, которые договор требует сделать до получения денег. Например, зарегистрировать залог или предоставить договор с поставщиком.'
+      ],
+      bank: [
+        'Готовит договоры и проверяет полномочия подписантов.',
+        'Организует регистрацию залога, если она нужна. Например, внесение в реестр уведомлений о залоге движимого имущества или регистрацию ипотеки на недвижимость.',
+        'Проверяет, выполнены ли условия выдачи.'
+      ],
+      docs: [
+        'Документы, подтверждающие полномочия подписанта.',
+        'Решение об одобрении сделки, если оно требуется.',
+        'Документы, подтверждающие право собственности на залог.',
+        'Страховой полис, если требуется.'
+      ],
+      result: 'Договоры подписаны, обеспечение оформлено, условия выдачи выполнены.',
+      next: 'когда банк подтвердил, что все условия выдачи выполнены.',
+      delays: [
+        'Регистрация залога в государственных органах.',
+        'Получение согласий: участников компании, а если залогодатель — физическое лицо, иногда и его супруга.',
+        'Ошибки в документах на имущество.'
+      ],
+      branches: []
+    },
+    {
+      short: 'Получение средств',
+      title: 'Получите средства и используйте их по назначению',
+      phase: 2,
+      goal: 'Получить кредит и направить деньги на цель, указанную в договоре.',
+      client: [
+        'Подайте заявление на выдачу кредита или <strong>транша</strong> (части кредита, которую выдают отдельно), если этого требует договор.',
+        'Проверьте, что деньги поступили: на ваш расчётный счёт или напрямую поставщику.',
+        'Тратьте средства только по <strong>целевому назначению</strong> — на цель, указанную в договоре.',
+        'Сохраняйте документы, подтверждающие расходы: договоры, счета, платёжные поручения, акты.'
+      ],
+      bank: [
+        'Перечисляет средства в соответствии с договором.',
+        'Может контролировать целевое использование, например перечисляя деньги напрямую поставщику.'
+      ],
+      docs: [
+        'Заявление на выдачу, если оно требуется.',
+        'Договор, счёт или спецификация от поставщика.',
+        'Платёжные документы.'
+      ],
+      result: 'Деньги получены и направлены на цель кредита.',
+      next: 'с момента выдачи: теперь важно исполнять договор — платить по графику и выполнять другие обязательства.',
+      delays: [
+        'Не выполнены условия выдачи.',
+        'Неполные документы по сделке с поставщиком.'
+      ],
+      branches: []
+    },
+    {
+      short: 'Возврат',
+      title: 'Возвращайте кредит и выполняйте условия договора',
+      phase: 2,
+      goal: 'Полностью исполнить обязательства перед банком и сохранить хорошую кредитную историю.',
+      client: [
+        'Вносите платежи по графику. Позаботьтесь, чтобы нужная сумма была на счёте заранее, до даты платежа.',
+        'Подтверждайте целевое использование средств в срок, установленный договором.',
+        'Передавайте банку отчётность и сведения, которые требует договор.',
+        'Соблюдайте ковенанты, следите за состоянием залога и вовремя продлевайте страховку.',
+        'Если этого требует договор, сообщайте банку о существенных изменениях: смене владельцев, новых крупных долгах.',
+        'Если появился риск просрочки, обратитесь в банк заранее — до того, как она возникнет.'
+      ],
+      bank: [
+        'Списывает платежи по графику.',
+        'Ведёт мониторинг: регулярно проверяет финансовое положение бизнеса и состояние залога.',
+        'После полного погашения подтверждает, что обязательства исполнены, и снимает обременение с залога или передаёт документы для этого.'
+      ],
+      docs: [
+        'Регулярная финансовая отчётность.',
+        'Документы о целевом использовании средств.',
+        'Продлённые страховые полисы.'
+      ],
+      result: 'Кредит полностью погашен, обязательства закрыты, ограничения с заложенного имущества сняты.',
+      next: 'после последнего платежа: запросите в банке справку об отсутствии задолженности и убедитесь, что залог освобождён.',
+      delays: [
+        'Просрочка платежа ведёт к неустойке (штрафу или пеням) и портит кредитную историю.',
+        'При нарушении ковенантов банк может повысить ставку или потребовать досрочно вернуть кредит, если это предусмотрено договором.',
+        'При досрочном погашении проверьте условия и порядок уведомления банка.'
+      ],
+      branches: []
+    }
+  ];
+
+  var DOC_GROUPS = [
+    {
+      title: 'Заявка и согласия',
+      items: [
+        { id: 'd-app', text: 'Анкета-заявка на кредит' },
+        { id: 'd-pd', text: 'Согласие на обработку персональных данных', hint: 'От руководителя, владельцев и поручителей' },
+        { id: 'd-bki', text: 'Согласие на запрос кредитной истории', hint: 'Компании, владельцев и поручителей' }
+      ]
+    },
+    {
+      title: 'О компании и руководителях',
+      items: [
+        { id: 'd-charter', text: 'Устав и изменения к нему', hint: 'Для юридических лиц' },
+        { id: 'd-head', text: 'Документ о назначении руководителя или доверенность подписанта' },
+        { id: 'd-pass', text: 'Паспорта руководителя, основных владельцев и поручителей', hint: 'Предъявляются в банке' },
+        { id: 'd-owners', text: 'Сведения о структуре владения и связанных компаниях' },
+        { id: 'd-lic', text: 'Лицензии и разрешения', hint: 'Если деятельность лицензируется' }
+      ]
+    },
+    {
+      title: 'Финансовые сведения',
+      items: [
+        { id: 'd-fs', text: 'Бухгалтерская отчётность за последний год и последний отчётный период' },
+        { id: 'd-tax', text: 'Налоговые декларации', hint: 'Особенно для ИП и упрощённой системы налогообложения' },
+        { id: 'd-stat', text: 'Выписки по счетам в других банках за 6–12 месяцев' },
+        { id: 'd-ar', text: 'Расшифровки дебиторской и кредиторской задолженности' },
+        { id: 'd-debt', text: 'Сведения о действующих кредитах, займах и лизинге' },
+        { id: 'd-budget', text: 'Справка об отсутствии задолженности по налогам', hint: 'Если её запрашивает банк' }
+      ]
+    },
+    {
+      title: 'Цель кредита и обеспечение',
+      items: [
+        { id: 'd-calc', text: 'Расчёт потребности и краткое обоснование цели' },
+        { id: 'd-offers', text: 'Коммерческие предложения, счета или договоры с поставщиками' },
+        { id: 'd-plan', text: 'Бизнес-план или расчёт окупаемости', hint: 'Обычно для крупных проектов' },
+        { id: 'd-collat', text: 'Документы на имущество, предлагаемое в залог' },
+        { id: 'd-eval', text: 'Отчёт об оценке залога', hint: 'Если его требует банк' },
+        { id: 'd-guar', text: 'Сведения о поручителях' }
+      ]
+    }
+  ];
+
+  var STORAGE_KEY = 'biz-credit-guide-checklist-v1';
+
+  function $(sel, ctx) { return (ctx || document).querySelector(sel); }
+  function $all(sel, ctx) { return Array.prototype.slice.call((ctx || document).querySelectorAll(sel)); }
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function scrollBehavior() { return reduceMotion ? 'auto' : 'smooth'; }
+  function listHtml(items) {
+    return '<ul>' + items.map(function (t) { return '<li>' + t + '</li>'; }).join('') + '</ul>';
+  }
+
+  var current = 0;
+  var total = STAGES.length;
+
+  var stepperEl = $('#stepper');
+  var cardEl = $('#step-card');
+  var prevBtn = $('#prev-btn');
+  var nextBtn = $('#next-btn');
+  var liveEl = $('#step-live');
+
+  /* ----- Схема этапов ----- */
+  function renderStepper() {
+    stepperEl.innerHTML = STAGES.map(function (s, i) {
+      return '<li class="stepper__item">' +
+        '<button type="button" class="stepper__btn" data-step="' + i + '">' +
+          '<span class="stepper__num" aria-hidden="true">' + (i + 1) + '</span>' +
+          '<span class="stepper__label"><span class="visually-hidden">Этап ' + (i + 1) + ': </span>' + s.short +
+          '<span class="visually-hidden stepper__state"></span></span>' +
+        '</button></li>';
+    }).join('');
+
+    stepperEl.addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-step]');
+      if (!btn) return;
+      goToStep(parseInt(btn.getAttribute('data-step'), 10), { focusTitle: false, announce: true });
+    });
+  }
+
+  function updateStepper() {
+    $all('.stepper__item', stepperEl).forEach(function (li, i) {
+      var btn = li.querySelector('.stepper__btn');
+      var state = li.querySelector('.stepper__state');
+      li.classList.toggle('is-done', i < current);
+      li.classList.toggle('is-current', i === current);
+      if (i === current) {
+        btn.setAttribute('aria-current', 'step');
+        state.textContent = ' — текущий этап';
+      } else {
+        btn.removeAttribute('aria-current');
+        state.textContent = i < current ? ' — пройден' : '';
+      }
+    });
+    $all('.phase').forEach(function (p) {
+      p.classList.toggle('is-active', parseInt(p.getAttribute('data-phase'), 10) === STAGES[current].phase);
+    });
+    $('#progress-text').textContent = 'Этап ' + (current + 1) + ' из ' + total + ' · ' + PHASES[STAGES[current].phase];
+    $('#progress-fill').style.width = ((current + 1) / total * 100) + '%';
+  }
+
+  /* ----- Карточка этапа ----- */
+  function renderStep() {
+    var s = STAGES[current];
+    var nextStage = STAGES[current + 1];
+
+    var bankHtml = (s.bank && s.bank.length) ? listHtml(s.bank) : '<p class="role__note">' + s.bankNote + '</p>';
+
+    var nextLine = nextStage
+      ? '<p><strong>Следующий шаг:</strong> этап ' + (current + 2) + ' — «' + nextStage.title + '».</p>'
+      : '<p><strong>Маршрут завершён.</strong> Ниже — краткие итоги и рекомендации о том, как обратиться в банк.</p>';
+
+    var transitionLabel = nextStage ? 'Когда переходить дальше:' : 'Что сделать в конце:';
+
+    var html =
+      '<header>' +
+        '<p class="step-card__eyebrow">Этап ' + (current + 1) + ' из ' + total + ' · ' + PHASES[s.phase] + '</p>' +
+        '<h3 id="step-title" tabindex="-1">' + s.title + '</h3>' +
+        '<p class="step-card__goal"><strong>Цель:</strong> ' + s.goal + '</p>' +
+      '</header>' +
+      '<div class="roles">' +
+        '<section class="role role--client" aria-labelledby="role-client-title">' +
+          '<h4 id="role-client-title"><span class="role__badge" aria-hidden="true">Вы</span>Что делаете вы</h4>' +
+          listHtml(s.client) +
+        '</section>' +
+        '<section class="role role--bank" aria-labelledby="role-bank-title">' +
+          '<h4 id="role-bank-title"><span class="role__badge" aria-hidden="true">Банк</span>Что делает банк</h4>' +
+          bankHtml +
+        '</section>' +
+      '</div>' +
+      (s.note ? '<p class="step-note"><strong>Важно:</strong> ' + s.note + '</p>' : '') +
+      '<section class="outcome" aria-labelledby="outcome-title">' +
+        '<h4 id="outcome-title">Результат этапа</h4>' +
+        '<p>' + s.result + '</p>' +
+        '<p><strong>' + transitionLabel + '</strong> ' + s.next + '</p>' +
+        nextLine +
+      '</section>' +
+      '<details class="details">' +
+        '<summary>Какие документы и сведения могут понадобиться</summary>' +
+        '<div class="details__body">' + listHtml(s.docs) +
+          '<p class="fine">Точный перечень определяет банк.</p></div>' +
+      '</details>' +
+      '<details class="details">' +
+        '<summary>Возможные задержки и важные вопросы</summary>' +
+        '<div class="details__body">' + listHtml(s.delays) + '</div>' +
+      '</details>' +
+      (s.example
+        ? '<details class="details"><summary>Условный пример</summary><div class="details__body">' + s.example + '</div></details>'
+        : '');
+
+    if (s.branches && s.branches.length) {
+      html += '<div class="branch-links"><span class="branch-links__label">Если маршрут меняется:</span>' +
+        s.branches.map(function (id) {
+          return '<a class="chip" href="#branch-' + id + '">' + BRANCH_TITLES[id] + '</a>';
+        }).join('') + '</div>';
+    }
+
+    cardEl.innerHTML = html;
+  }
+
+  function updateNav() {
+    var prevTarget = $('#prev-target');
+    var nextTarget = $('#next-target');
+    if (current > 0) {
+      prevBtn.disabled = false;
+      prevTarget.textContent = 'Этап ' + current + '. ' + STAGES[current - 1].short;
+    } else {
+      prevBtn.disabled = true;
+      prevTarget.textContent = 'Это первый этап';
+    }
+    if (current < total - 1) {
+      nextTarget.textContent = 'Этап ' + (current + 2) + '. ' + STAGES[current + 1].short;
+    } else {
+      nextTarget.textContent = 'К итогам маршрута';
+    }
+  }
+
+  function headerOffset() {
+    var h = $('.site-header');
+    return h ? h.getBoundingClientRect().height : 0;
+  }
+
+  function ensureTrackerVisible() {
+    var tracker = $('#tracker');
+    var rect = tracker.getBoundingClientRect();
+    var top = headerOffset();
+    if (rect.top < top || rect.top > window.innerHeight * 0.5) {
+      var y = window.pageYOffset + rect.top - top - 12;
+      window.scrollTo({ top: y, behavior: scrollBehavior() });
+    }
+  }
+
+  function goToStep(index, opts) {
+    opts = opts || {};
+    if (index < 0 || index >= total) return;
+    current = index;
+    renderStep();
+    updateStepper();
+    updateNav();
+    if (opts.scroll) ensureTrackerVisible();
+    if (opts.focusTitle) {
+      var t = $('#step-title');
+      if (t) t.focus({ preventScroll: true });
+    }
+    if (opts.announce) {
+      liveEl.textContent = 'Открыт этап ' + (index + 1) + ' из ' + total + ': ' + STAGES[index].title;
+    }
+  }
+
+  prevBtn.addEventListener('click', function () {
+    if (current > 0) goToStep(current - 1, { focusTitle: true, scroll: true });
+  });
+
+  nextBtn.addEventListener('click', function () {
+    if (current < total - 1) {
+      goToStep(current + 1, { focusTitle: true, scroll: true });
+    } else {
+      var summary = $('#summary');
+      summary.scrollIntoView({ behavior: scrollBehavior(), block: 'start' });
+      $('#summary-title').focus({ preventScroll: true });
+    }
+  });
+
+  $('#start-btn').addEventListener('click', function () {
+    goToStep(0, { focusTitle: true, scroll: false });
+    var tracker = $('#tracker');
+    var y = window.pageYOffset + tracker.getBoundingClientRect().top - headerOffset() - 12;
+    window.scrollTo({ top: y, behavior: scrollBehavior() });
+  });
+
+  // Кнопки «Открыть этап N» в альтернативных сценариях
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-goto]');
+    if (!btn) return;
+    var idx = parseInt(btn.getAttribute('data-goto'), 10) - 1;
+    goToStep(idx, { focusTitle: true, scroll: false });
+    var tracker = $('#tracker');
+    var y = window.pageYOffset + tracker.getBoundingClientRect().top - headerOffset() - 12;
+    window.scrollTo({ top: y, behavior: scrollBehavior() });
+  });
+
+  /* ----- Список документов ----- */
+  var saved = {};
+  try { saved = JSON.parse(window.localStorage.getItem(STORAGE_KEY)) || {}; } catch (err) { saved = {}; }
+
+  function saveChecklist() {
+    try { window.localStorage.setItem(STORAGE_KEY, JSON.stringify(saved)); } catch (err) { /* хранилище недоступно — отметки работают до перезагрузки */ }
+  }
+
+  function renderChecklist() {
+    var wrap = $('#doc-groups');
+    wrap.innerHTML = DOC_GROUPS.map(function (g, gi) {
+      return '<fieldset class="doc-group"><legend>' + g.title + '</legend><ul>' +
+        g.items.map(function (it) {
+          var checked = saved[it.id] ? ' checked' : '';
+          return '<li><label class="doc-item' + (saved[it.id] ? ' is-checked' : '') + '" for="' + it.id + '">' +
+            '<input type="checkbox" id="' + it.id + '" data-doc="' + it.id + '"' + checked + '>' +
+            '<span>' + it.text + (it.hint ? '<span class="doc-item__hint">' + it.hint + '</span>' : '') + '</span>' +
+          '</label></li>';
+        }).join('') +
+      '</ul></fieldset>';
+    }).join('');
+    updateChecklistCount();
+  }
+
+  function updateChecklistCount() {
+    var boxes = $all('[data-doc]');
+    var done = boxes.filter(function (b) { return b.checked; }).length;
+    $('#doc-count').textContent = 'Отмечено ' + done + ' из ' + boxes.length;
+    $('#doc-fill').style.width = (boxes.length ? done / boxes.length * 100 : 0) + '%';
+  }
+
+  $('#doc-groups').addEventListener('change', function (e) {
+    var box = e.target.closest('[data-doc]');
+    if (!box) return;
+    var id = box.getAttribute('data-doc');
+    if (box.checked) { saved[id] = true; } else { delete saved[id]; }
+    box.closest('.doc-item').classList.toggle('is-checked', box.checked);
+    saveChecklist();
+    updateChecklistCount();
+  });
+
+  $('#doc-reset').addEventListener('click', function () {
+    saved = {};
+    saveChecklist();
+    $all('[data-doc]').forEach(function (b) {
+      b.checked = false;
+      b.closest('.doc-item').classList.remove('is-checked');
+    });
+    updateChecklistCount();
+  });
+
+  /* ----- «Как обратиться в банк» ----- */
+  var contactBtn = $('#contact-toggle');
+  var contactPanel = $('#contact-panel');
+  contactBtn.addEventListener('click', function () {
+    var isOpen = contactBtn.getAttribute('aria-expanded') === 'true';
+    contactBtn.setAttribute('aria-expanded', String(!isOpen));
+    contactPanel.hidden = isOpen;
+  });
+
+  /* ----- Запуск ----- */
+  renderStepper();
+  goToStep(0, { focusTitle: false, scroll: false });
+  renderChecklist();
+})();
+</script>
 </body>
 </html>
